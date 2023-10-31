@@ -26,6 +26,9 @@ class ScanController extends GetxController {
   var isCameraInitialized = false.obs;
   var cameraCount = 0;
 
+  var x,y,w,h = 0.0;
+  var label = "";
+
   initCamera() async {
     if (await Permission.camera.request().isGranted) {
       cameras = await availableCameras();
@@ -78,7 +81,13 @@ class ScanController extends GetxController {
     );
 
     if(detector != null){
-      log('resultat is : $detector');
+      var ourDetectedObject = detector.first;
+      if(ourDetectedObject['confidence'] * 100 > 45){
+        label = ourDetectedObject['label'].toString();
+      } else {
+        label = "Not element";
+      }
+      update();
     }
   }
 }
