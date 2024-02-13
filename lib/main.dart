@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:ml_kit_flutter/global_variable.dart';
+import 'package:ml_kit_flutter/partials/header.dart';
+import 'package:ml_kit_flutter/partials/Content.dart';
 import 'package:ml_kit_flutter/views/camera_view.dart';
 
 void main() {
@@ -11,13 +15,33 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return MaterialApp(
-      title: 'ML KIT TEST',
+      debugShowCheckedModeBanner: false,
+      title: 'APPLE.COM',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        fontFamily: 'SFProText',
         useMaterial3: true,
       ),
-      home: const CameraView(),
+      home: Scaffold(
+        backgroundColor: primaryColor,
+        body: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              children: [
+
+                Header(context: context),
+
+                Column(
+                  children: data.map((e){
+                    return Content(context: context, data: e);
+                  }).toList(),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
