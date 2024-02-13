@@ -13,11 +13,6 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  get: ^4.6.6
-  permission_handler: ^11.0.1
-  camera: ^0.10.5+5
-  flutter_tflite: ^1.0.1
-  image: ^3.2.0
 
 dev_dependencies:
   flutter_test:
