@@ -13,6 +13,12 @@ Color primaryColor = const Color.fromRGBO(22, 22, 23, 0.8);
 Color secondaryColor = const Color.fromRGBO(255, 255, 255, 0.5);
 Color thirdColor = const Color(0xFF2997FF);
 
+final List<String> appleTV = [
+  'assets/images/alerte-rouge.jpeg',
+  'assets/images/une-vie.jpg',
+  'assets/images/flora-and-son.jpg',
+];
+
 
 List data = [
   {

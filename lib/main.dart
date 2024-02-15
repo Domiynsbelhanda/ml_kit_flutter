@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ml_kit_flutter/global_variable.dart';
+import 'package:ml_kit_flutter/partials/caroussel.dart';
 import 'package:ml_kit_flutter/partials/header.dart';
 import 'package:ml_kit_flutter/partials/Content.dart';
-import 'package:ml_kit_flutter/views/camera_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: Scaffold(
-        backgroundColor: primaryColor,
+        backgroundColor: secondaryColor,
         body: SingleChildScrollView(
           child: Container(
             child: Column(
@@ -37,6 +37,10 @@ class MyApp extends StatelessWidget {
                     return Content(context: context, data: e);
                   }).toList(),
                 ),
+
+                const Caroussel(),
+
+                const SizedBox(height: 24.0)
               ],
             ),
           ),
