@@ -4,6 +4,7 @@ import 'package:ml_kit_flutter/global_variable.dart';
 import 'package:ml_kit_flutter/partials/caroussel.dart';
 import 'package:ml_kit_flutter/partials/header.dart';
 import 'package:ml_kit_flutter/partials/Content.dart';
+import 'package:parallax_animation/parallax_animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: secondaryColor,
         body: SingleChildScrollView(
-          child: Container(
+          child: ParallaxArea(
             child: Column(
               children: [
 

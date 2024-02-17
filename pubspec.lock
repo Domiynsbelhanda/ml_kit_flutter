@@ -115,6 +115,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  parallax_animation:
+    dependency: "direct main"
+    description:
+      name: parallax_animation
+      sha256: "682bd9476a41cc2d5a2348dfe2d47aca34c7900fa80d5e576752f7b1ba34ff2b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.3"
   path:
     dependency: transitive
     description:
@@ -194,3 +202,4 @@ packages:
     version: "0.1.4-beta"
 sdks:
   dart: ">=3.1.0-185.0.dev <4.0.0"
+  flutter: ">=1.17.0"
