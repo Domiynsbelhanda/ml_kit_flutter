@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ml_kit_flutter/partials/iPhone15Content.dart';
 
 import '../global_variable.dart';
 import '../partials/header.dart';
@@ -20,8 +21,9 @@ class _iPhone15Pro extends State<iPhone15Pro> {
         child: Column(
           children: [
             Header(context: context),
+
             Container(
-              height: width(context) / 3,
+              height: width(context) / 4,
               width: width(context),
               decoration: BoxDecoration(color: primaryColor),
               child: const Center(
@@ -36,7 +38,9 @@ class _iPhone15Pro extends State<iPhone15Pro> {
                   ),
                 ),
               ),
-            )
+            ),
+
+            const iPhone15Content()
           ],
         ),
       ),
