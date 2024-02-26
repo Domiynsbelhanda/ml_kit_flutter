@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ml_kit_flutter/details/iPhone15Pro.dart';
 
 import '../global_variable.dart';
 
@@ -6,7 +7,14 @@ class Options extends StatelessWidget{
 
   final String text, texte;
   final bool dark;
-  const Options({super.key, required BuildContext context, required this.text, required this.dark, required this.texte});
+  final route;
+  const Options({
+    super.key,
+    required BuildContext context,
+    required this.text,
+    required this.dark,
+    required this.texte,
+    required this.route});
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +26,20 @@ class Options extends StatelessWidget{
         children: [
           Row(
             children: [
-              Text(
-                text,
-                style: TextStyle(
-                  fontFamily: 'SFProText',
-                  color: thirdColor,
-                  fontSize: 16,
+              GestureDetector(
+                onTap: route == null ? (){} :  ()=>Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => route
+                    ),
+                ),
+                child: Text(
+                  text,
+                  style: TextStyle(
+                    fontFamily: 'SFProText',
+                    color: thirdColor,
+                    fontSize: 16,
+                  ),
                 ),
               ),
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ml_kit_flutter/global_variable.dart';
+import 'package:ml_kit_flutter/main.dart';
 
 class Header extends StatelessWidget{
   const Header({super.key, required BuildContext context});
@@ -32,10 +33,18 @@ class Header extends StatelessWidget{
 
                 const SizedBox(width: 16.0),
 
-                Icon(
-                  Icons.home,
-                  size: width(context) / 13,
-                  color: secondaryColor,
+                GestureDetector(
+                  onTap: ()=>Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MyApp()
+                    ),
+                  ),
+                  child: Icon(
+                    Icons.home,
+                    size: width(context) / 13,
+                    color: secondaryColor,
+                  ),
                 ),
 
                 const SizedBox(width: 16.0),

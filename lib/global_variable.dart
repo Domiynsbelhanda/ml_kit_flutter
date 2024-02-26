@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'details/iPhone15Pro.dart';
+
 double width(context){
   return MediaQuery.of(context).size.width;
 }
@@ -29,7 +31,8 @@ List data = [
     'text': 'En savoir plus',
     'texte': 'Acheter',
     'dark': true,
-    'logo': false
+    'logo': false,
+    'page': const iPhone15Pro()
   },
 
   {

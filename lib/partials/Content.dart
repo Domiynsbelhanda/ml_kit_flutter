@@ -37,7 +37,7 @@ class Content extends StatelessWidget{
 
               SubTitle(context: context, text: data['subtitle'], dark: data['dark'],),
 
-              Options(context: context, text: data['text'], dark: true, texte: data['texte'])
+              Options(context: context, text: data['text'], dark: true, texte: data['texte'], route: data['page'])
             ],
           ),
         ),
