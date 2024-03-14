@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ml_kit_flutter/global_variable.dart';
+import 'package:ml_kit_flutter/page/grid_view.dart';
 import 'package:ml_kit_flutter/partials/caroussel.dart';
 import 'package:ml_kit_flutter/partials/header.dart';
 import 'package:ml_kit_flutter/partials/Content.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         backgroundColor: secondaryColor,
-        body: SingleChildScrollView(
+        body: "ab" == "ab" ? GridViewPage() :  SingleChildScrollView(
           child: ParallaxArea(
             child: Column(
               children: [
